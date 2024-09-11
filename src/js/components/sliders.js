@@ -33,6 +33,10 @@ for (const gallerySlider of gallerySliders) {
         spaceBetween : 86,
         slidesPerView: 2.3,
       },
+      2000: {
+        spaceBetween : 86,
+        slidesPerView: 'auto',
+      },
     }
   });
 }

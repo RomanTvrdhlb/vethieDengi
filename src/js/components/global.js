@@ -106,6 +106,7 @@ function modalInit(buttonsArray, buttonAttribute, activeClass) {
 
 overlay && overlay.addEventListener("click", function (e) {
   overlayClickHandler(e, activeClass);
+  console.log('123');
 });
 
 modalInit(modalsButton, "data-btn-modal", activeClass);
@@ -127,7 +128,7 @@ innerButtonModal && innerButtonModal.forEach(function(btn) {
     fadeIn(currentModal, 200);
     addCustomClass(currentModal, activeClass);
     disableScroll();
-    innerButton = overlay.querySelector(`${"[data-popup]"}.${activeClass} .close`);
+    innerButton = currentModal.querySelector('.close');
   });
 });
 

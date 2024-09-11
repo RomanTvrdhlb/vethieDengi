@@ -69,7 +69,6 @@
     transform: translate(50%, -29%);
 
     @include small-tablet{
-      transform: translate(30%, -29%);
       transform: translate(30%, 19%);
     }
   }

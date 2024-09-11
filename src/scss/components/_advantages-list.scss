@@ -7,25 +7,11 @@
     }
 
     @include for-small-tablet{
-        grid-gap: 0 clamp(40px, 8.3449vw, 120px);
+        grid-gap: 30px clamp(40px, 8.3449vw, 120px);
     }
 
     @include small-tablet{
-        grid-gap: 0 20px;
+        grid-gap: 25px 20px;
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    &__item{
-        @include for-small-tablet{
-            &:nth-child(n+4){
-                margin-top: -8px;
-            }
-        }
-
-        @include small-tablet{
-            &:nth-child(n+3){
-                margin-top: -8px;
-            }
-        }
     }
 }

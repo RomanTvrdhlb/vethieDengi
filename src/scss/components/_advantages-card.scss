@@ -11,20 +11,12 @@
 
     &__icon{
         display: flex;
-        width: clamp(155px, 14.1168vw, 203px); 
-        height: clamp(155px, 14.1168vw, 203px);
-        margin-bottom: calc(clamp(65px, 5.5633vw, 80px) * -1);
+        width: clamp(45px, 4.1725vw, 60px); 
+        aspect-ratio: 1;
 
         img,svg{
             width: 100%;
             height: auto;
-        }
-
-        &.mode{
-           img,svg{
-            position: relative;
-            top: calc(clamp(8px, 1.0431vw, 15px) * -1);
-           }
         }
     }
 

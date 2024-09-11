@@ -9,6 +9,10 @@
     margin: 45px 0 60px;
     height: clamp(300px, 25.156vw, 483px);
 
+    @media (min-width: (2000px)) {
+        width: 100%;
+    }
+
     @include mobile{
         height: 260px;
     }

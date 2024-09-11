@@ -7,5 +7,11 @@
       width: calc(100% + (var(--container-offset) * 2));
       padding: 0 var(--container-offset);
     }
+
+    &-slide{
+      @media (min-width: (2000px)) {
+        width: 775px;
+    }
+    }
   }
 }
