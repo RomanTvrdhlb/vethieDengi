@@ -1,0 +1,144 @@
+.order-section {
+  backdrop-filter: blur(25.087160110473633px);
+  box-shadow: 0 0 71px 0 rgba(0, 0, 0, 0.34);
+  background: var(--gr-h);
+  position: relative;
+  border: 0.6px solid var(--br-a);
+  width: calc(100% + 2px);
+  margin: 0 -1px 50px;
+  border-radius: 10px;
+  z-index: 1;
+
+  &__bg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-49.5%);
+    bottom: -54%;
+    z-index: -2;
+    opacity: 0.3;
+    height: Min(154.167vw, 2960px);
+    pointer-events: none;
+
+    @media (min-width: (1900px)) {
+      width: Min(116.823vw, 2243px);
+    }
+
+    @media (max-width: (1900px)) {
+      width: 115vw;
+      opacity: 0.1;
+    }
+
+    img,
+    picture {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--gr-f);
+    filter: blur(650px);
+  }
+
+  &::before {
+    width: clamp(931px, 83.936vw, 1207px);
+    height: clamp(931px, 83.936vw, 1207px);
+    transform: translate(-125%, -50%);
+    
+    @include small-tablet{
+      transform: translate(-95%, -60%);
+      width: 1000px;
+      height: 1000px;
+      filter: blur(197px);
+      opacity: .5;
+    }
+  }
+
+  &::after {
+    width: clamp(300px, 33.032vw, 475px);
+    height: clamp(300px, 33.032vw, 475px);
+    transform: translate(50%, -29%);
+
+    @include small-tablet{
+      transform: translate(30%, -29%);
+      transform: translate(30%, 19%);
+    }
+  }
+
+  .main-top {
+    &__title {
+      font-family: var(--font3);
+      font-size: clamp(45px, 6.7455vw, 97px);
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 36px;
+    padding: clamp(51px, 7.9972vw, 115px) 0;
+  }
+
+  &__bill {
+    filter: blur(2.2599999904632568px);
+    position: absolute;
+    bottom: 19%;
+    right: -12%;
+    width: clamp(150px, 29.7636vw, 428px);
+    height: clamp(97px, 19.4715vw, 280px);
+    display: flex;
+    z-index: -1;
+
+    img,
+    picture {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include tablet {
+      bottom: 1.5%;
+      right: -14%;
+    }
+
+    &.small {
+      right: initial;
+      left: 4%;
+      top: 16%;
+      bottom: initial;
+      width: Min(24.3394vw, 350px);
+      height: Min(17.9416vw, 258px);
+
+      @include desktop {
+        @include for-laptop {
+          left: -2%;
+        }
+      }
+
+      @include laptop {
+        left: -3%;
+      }
+
+      @include tablet {
+        left: -14%;
+      }
+
+      @include small-tablet {
+        top: 10%;
+      }
+
+      @include mobile {
+        top: 16%;
+      }
+    }
+  }
+}

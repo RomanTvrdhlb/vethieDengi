@@ -1,0 +1,11 @@
+.main-slider {
+  padding: 0 var(--container-offset);
+
+  .swiper {
+    &-container {
+      margin-left: calc(var(--container-offset) * -1);
+      width: calc(100% + (var(--container-offset) * 2));
+      padding: 0 var(--container-offset);
+    }
+  }
+}

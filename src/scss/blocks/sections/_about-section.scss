@@ -1,0 +1,128 @@
+.about-section{
+    padding-bottom: clamp(120px, 14.6036vw, 210px);
+	position: relative;
+    z-index: 2;
+
+	&__box{
+		display: flex;
+		flex-direction: column;
+		grid-gap: clamp(40px, 6.2587vw, 90px);
+	}
+
+    &__content{
+        @include for-desktop{
+            grid-gap: clamp(40px, 9.7357vw, 140px);
+        }
+
+        @include desktop{
+            grid-gap: clamp(25px, 2.7816vw, 40px);
+        }
+
+        @include for-small-tablet{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include small-tablet{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pretitle{
+            @include small-tablet{
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__wrapp{
+        display: flex;
+        justify-content: space-between;
+        grid-gap: 10px;
+
+        @include mobile{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__coll{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(20px, 2.0862vw, 30px);
+
+        .subtitle{
+            padding-top: 5px;
+        }
+
+        &.mode{
+            grid-gap: clamp(15px, 1.7385vw, 25px);
+        }
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+     
+        p{
+            font-family: var(--font4);
+            font-weight: 400;
+            font-size: clamp(16px, 1.2517vw, 18px);
+            color: var(--cl-a);
+        }
+    }
+
+	&__bill{
+		filter: blur(3.2599999904632568px);
+		position: absolute;
+		bottom: 3%;
+		left: -4%;
+        width: Min(27.8164vw, 400px);
+        height: Min(18.0807vw, 260px);
+		display: flex;
+		z-index: -1;
+
+		img,picture{
+			width: 100%;
+			height: 100%;
+		}
+
+        @include small-tablet{
+            &:not(.small){
+                width: clamp(105px, 17.578vw, 135px);
+                height: clamp(78px, 11.458vw, 88px);
+            }
+        }
+
+		&.small{
+            left: initial;
+			right: -6%;
+			top: -3%;
+			transform: translateX(-50%);
+			width: Min(19.3324vw, 278px);
+			height: Min(12.5869vw, 181px);
+		}
+	}
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      pointer-events: none;
+      background: var(--gr-f);
+      filter: blur(190px);
+      width: 475px;
+      height: 475px;
+        transform: translate(30%, -50%);
+        opacity: .8;
+
+        @include for-mobile{
+            display: none;
+        }
+    }
+  
+}

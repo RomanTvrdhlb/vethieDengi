@@ -1,0 +1,70 @@
+
+:root {
+  // --------------- default global variables ---------------
+  --body-bg: #030106;
+  --body-font-size: 16px;
+  --content-width: 1438px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  
+  // --------------- default font-family variables ---------------
+  --font-family: "PTMono", sans-serif;   // var(--font-family);
+  --second-family: "Poppins", sans-serif;   // var(--second-family);
+  --third-family: "Ubuntu", sans-serif;   // var(--third-family);
+  --font3: "Montserrat", sans-serif;   // var(--font3);
+  --font4: "Inter", sans-serif;   // var(--font4);
+
+  // --------------- default text color variables ---------------
+  --cl-a: #ffffff; // var(--cl-a);
+  --cl-b: #000000; // var(--cl-b);
+  --cl-c: #030106; // var(--cl-c);
+  --cl-d: #c1c1c1; // var(--cl-d);
+  --cl-e: #35c411; // var(--cl-e);
+  --cl-f: #bababa; // var(--cl-f);
+  --cl-g: #949596; // var(--cl-g);
+  --cl-h: #767676; // var(--cl-h);
+  --cl-i: #acb2b4; // var(--cl-i);
+
+  // --------------- default background color variables ---------------
+  --bg-a: #ffffff; // var(--bg-a);
+  --bg-b: #000000; // var(--bg-b);
+  --bg-c: #7a9fff; // var(--bg-c);
+  --bg-d: #272727; // var(--bg-d);
+  --bg-e: #030106; // var(--bg-e);
+  --bg-f: #d9d9d9; // var(--bg-f);
+  --bg-g: #acb2b4; // var(--bg-g);
+  --bg-h: #8966ef; // var(--bg-h);
+
+  // --------------- default border color variable ---------------
+  --br-a: #acb2b4; // var(--br-a);
+  --br-b: #313131; // var(--br-b);
+  --br-c: #fff; // var(--br-c);
+
+  // --------------- default gradient variables ---------------
+  --gr-a: linear-gradient(90deg, #40de74 0%, #33edce 100%);// var(--gr-a);
+  --gr-b: linear-gradient(122deg, rgba(144, 148, 146, 0.42) 0%, rgba(203, 203, 203, 0.42) 100%);// var(--gr-b);
+  --gr-c: linear-gradient(135deg, rgba(137, 102, 239, 0.38) 0%, rgba(255, 101, 101, 0.38) 100%);// var(--gr-c);
+  --gr-d: linear-gradient(90deg, #40de74 0%, #33edce 100%);// var(--gr-d);
+  --gr-e: linear-gradient(135deg, #66ef73 0%, #00e85d 100%);// var(--gr-e);
+  --gr-f: linear-gradient(135deg, #8966ef 0%, #ff6565 100%);// var(--gr-f);
+  --gr-g: linear-gradient(122deg, rgba(144, 148, 146, 0.3) 0%, rgba(203, 203, 203, 0) 100%);// var(--gr-g);
+  --gr-h: linear-gradient(122deg, rgba(144, 148, 146, 0.42) 0%, rgba(203, 203, 203, 0) 100%);// var(--gr-h);
+  --gr-i: linear-gradient(122deg, rgba(144, 148, 146, 0.32) 0%, rgba(203, 203, 203, 0) 100%);// var(--gr-i);
+  --gr-j: linear-gradient(117deg, #909492 0%, rgba(203, 203, 203, 0.76) 100%);// var(--gr-j);
+  --gr-k: linear-gradient(104deg, #23c859 0%, #8af5e3 100%);// var(--gr-k);
+  --gr-l: linear-gradient(122deg, rgba(144, 148, 146, 0.32) 0%, rgba(203, 203, 203, 0) 100%);// var(--gr-l);
+
+
+ // --------------- default JS variables ---------------
+ --header-height: 236px;
+
+  @include laptop{
+    --header-height: 204px;
+  }
+
+  @include tablet{
+    --header-height: 71px;
+  }
+}
+
+

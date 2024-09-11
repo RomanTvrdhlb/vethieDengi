@@ -1,0 +1,31 @@
+.advantages-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include for-tablet{
+        padding: 0 clamp(10px, 11.8915vw, 171px);
+    }
+
+    @include for-small-tablet{
+        grid-gap: 0 clamp(40px, 8.3449vw, 120px);
+    }
+
+    @include small-tablet{
+        grid-gap: 0 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item{
+        @include for-small-tablet{
+            &:nth-child(n+4){
+                margin-top: -8px;
+            }
+        }
+
+        @include small-tablet{
+            &:nth-child(n+3){
+                margin-top: -8px;
+            }
+        }
+    }
+}

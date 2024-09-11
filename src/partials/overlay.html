@@ -1,0 +1,164 @@
+<div class="overlay" data-overlay>
+
+    <div class="modal" data-popup="worn">
+        <button class="close" aria-label="Закрыть модальное окно">
+          <svg width="50" height="50">
+            <use href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__box">
+            <div class="modal__top">
+                <span class="modal__title">Зношені та пошкоджені купюри</span>
+            </div>
+           
+            <div class="editor">
+                <p>Ми приймаємо пошкоджену валюту, від яких відмовляються банки і обмінники пропонуючи найнизчий відсоток:</p>
+
+                <ul>
+                    <li>склеєні скотчем</li>
+                    <li>проколоті</li>
+                    <li>випрані або відсирілі</li>
+                    <li>з цвіллю або гниллю </li>
+                    <li>зі штампами, фарбою, масними плямами і іншими сильними забрудненнями</li>
+                    <li>після пожежі</li>
+                    <li>розпадаються на частини</li>
+                    <li>постраждалі від хімічних реактивів.</li>
+                </ul>
+                
+                <p>Вартість послуг – від 1% в залежності від ступеня пошкодження і суми.</p>
+            </div>
+              
+            <button class="main-btn" data-btn-inner="info">Залишити заявку</button>
+        </div>
+    </div>
+
+    <div class="modal" data-popup="currency">
+        <button class="close" aria-label="Закрыть модальное окно">
+          <svg width="50" height="50">
+            <use href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__box">
+            <div class="modal__top">
+                <span class="modal__title">Валюта, яка вийшла з обігу</span>
+            </div>
+           
+            <div class="editor">
+                <p>Обмінюємо банкноти які виходять з обігу:</p>
+
+                <ul>
+                    <li>англійського фунта стерлінгів</li>
+                    <li>швейцарського франка</li>
+                    <li>банкноти країн Єврозони, які були замінені на євро</li>
+                    <li>канадського долара</li>
+                    <li>шведскьої та датської крони</li>
+                    <li>та інші</li>
+                </ul>
+            </div>
+              
+            <button class="main-btn" data-btn-inner="info">Залишити заявку</button>
+        </div>
+    </div>
+
+    <div class="modal" data-popup="coins">
+        <button class="close" aria-label="Закрыть модальное окно">
+          <svg width="50" height="50">
+            <use href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__box">
+            <div class="modal__top">
+                <span class="modal__title">Валюта, яка вийшла з обігу</span>
+            </div>
+           
+            <div class="editor">
+                <p>Монети  - оцiнка залежить вiд суми та вiд країни походження.</p>
+            </div>
+            <button class="main-btn" data-btn-inner="info">Залишити заявку</button>
+        </div>
+    </div>
+
+    <div class="modal info" data-popup="info">
+        <button class="close" aria-label="Закрыть модальное окно">
+          <svg width="50" height="50">
+            <use href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+
+        <div class="modal__box">
+            <div class="modal__top">
+                <span class="modal__title">Оцінка</span>
+                <p>Надішліть нам фотографію старої купюри або монети і ми оцінимо вартість обміну</p>
+            </div>
+           
+            <form class="main-form">
+
+                <div class="main-form__label">
+                    <span class="main-form__text">Додати фотографію</span>
+
+                    <div class="download">
+                        <label for="fileInput2" class="download__btn">
+                            <svg width='15' height='25'>
+                                <use href='img/sprite.svg#download'></use>
+                            </svg>
+                        </label>
+
+                        <div class="download__box">
+                            <span class="download__text">Файл не вибрано</span>
+                        </div>
+
+                        <input class="download__input" type="file" id="fileInput2" accept="image/*">
+                    </div>
+
+                    <span class="main-form__error">
+                        <svg width='16' height='16'>
+                            <use href='img/sprite.svg#danger'></use>
+                        </svg>
+                        Поле обов'язкове для заповнення
+                    </span>
+                </div>
+
+                <label for="user2" class="main-form__label">
+                    <span class="main-form__text">Ваше ім’я*</span>
+                    <input type="text" name="user2" class="main-form__input">
+                    <span class="main-form__error">
+                        <svg width='16' height='16'>
+                            <use href='img/sprite.svg#danger'></use>
+                        </svg>
+                        Поле обов'язкове для заповнення
+                    </span>
+                </label>
+                <label for="city2" class="main-form__label">
+                    <span class="main-form__text">Ваше місто*</span>
+                    <input type="text" name="city2" class="main-form__input">
+                    <span class="main-form__error">
+                        <svg width='16' height='16'>
+                            <use href='img/sprite.svg#danger'></use>
+                        </svg>
+                        Поле обов'язкове для заповнення
+                    </span>
+                </label>
+                <label for="phone2" class="main-form__label">
+                    <span class="main-form__text">Номер телефону*</span>
+                    <input type="tel" name="phone2" class="main-form__input">
+                    <span class="main-form__error">
+                        <svg width='16' height='16'>
+                            <use href='img/sprite.svg#danger'></use>
+                        </svg>
+                        Поле обов'язкове для заповнення
+                    </span>
+                </label>
+                <label for="mess2" class="main-form__label">
+                    <span class="main-form__text">Ваше повідомлення</span>
+                    <textarea name="mess2" class="main-form__area"></textarea>
+                </label>
+
+                <button class="main-btn">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+</div>

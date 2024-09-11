@@ -1,0 +1,32 @@
+.footer{
+	padding: clamp(51px, 6.3282vw, 91px) 0 clamp(51px, 7.9972vw, 115px);
+	background-color: var(--bg-e);
+	position: relative;
+	z-index: 3;
+
+	&::before{
+		content: '';
+		position: absolute;
+		inset: 1px 0 0;
+		z-index: -1;
+		pointer-events: none;
+		box-shadow: 0 -80px 90px 0 #000;
+	}
+
+	&__box{
+		display: flex;
+		flex-direction: column;
+		grid-gap: clamp(35px, 4.1725vw, 60px);
+	}
+
+	&__top{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 20px clamp(30px, 4.1725vw, 60px);
+
+		@include mobile{
+			flex-direction: column;
+		}
+	}
+}

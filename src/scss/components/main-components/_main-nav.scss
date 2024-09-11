@@ -1,0 +1,46 @@
+.main-nav {
+ 
+
+  &__list {
+    display: flex;
+    grid-gap: clamp(15px, 2.344vw, 45px);
+    align-items: center;
+  }
+
+  &__item {
+    & > * {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(14px, 1.25vw, 20px);
+      color: var(--cl-a);
+      gap: 5px;
+      transition: all .4s;
+      position: relative;
+
+      &::before{
+        position: absolute;
+        content: '';
+        right: calc(clamp(3px, .3477vw, 5px) * -1);
+        width: 0;
+        height: 1px;
+        bottom: calc(clamp(3px, .3477vw, 5px) * -1);
+        background: #fff;
+        transition: .4s ease-in;
+      }
+
+      &:hover{
+        font-weight: 700;
+
+        &::before{
+          right: auto;
+          left: calc(clamp(3px, .3477vw, 5px) * -1);
+          width: calc(100% + (clamp(3px, .3477vw, 5px) * 2));
+        }
+      }
+
+      @include tablet{
+        font-size: clamp(16px, 1.758vw, 18px);
+      }
+    }
+  }
+}

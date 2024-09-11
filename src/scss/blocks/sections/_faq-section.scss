@@ -1,0 +1,51 @@
+.faq-section{
+	padding-bottom: clamp(100px, 18.2893vw, 263px);
+	position: relative;
+	z-index: 2;
+
+	&__box{
+		display: flex;
+		flex-direction: column;
+		grid-gap: clamp(40px, 6.2587vw, 90px);
+	}
+
+	&__bill{
+		filter: blur(2.2599999904632568px);
+		position: absolute;
+		bottom: 10%;
+		right: 0;
+		width: clamp(221px, 29.7636vw, 428px);
+		height: clamp(144px, 19.4715vw, 280px);
+		display: flex;
+		z-index: -1;
+
+		img,picture{
+			width: 100%;
+			height: 100%;
+		}
+
+		@include mobile{
+			bottom: 7%;
+		}
+
+		&.small{
+			right: initial;
+			left: 28%;
+			transform: translateX(-50%);
+			bottom: -3%;
+			width: clamp(116px, 15.7163vw, 226px);
+			height: clamp(84px, 11.4047vw, 164px);
+
+			@include mobile{
+				left: 15%;
+			}
+		}
+	}
+
+	.main-top{
+		&__title{
+		  font-family: var(--font3);
+		  font-size: clamp(45px, 6.7455vw, 97px);
+		}
+	  }
+}

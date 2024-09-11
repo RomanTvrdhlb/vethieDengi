@@ -1,0 +1,40 @@
+[data-btn-modal] {
+  svg {
+    pointer-events: none;
+  }
+}
+
+.modal {
+  display: none;
+  margin: auto;
+  transform: scale(.8);
+  
+  &.active {
+    display: flex;
+    transform: scale(1);
+  }
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    svg {
+      width: clamp(35px, 3.4771vw, 50px);
+      height: auto;
+      pointer-events: none;
+      transition: all .2s;
+    }
+
+    &:hover{
+      svg{
+        transform: scale(1.05);
+      }
+    }
+  }
+
+}

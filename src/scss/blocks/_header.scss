@@ -1,0 +1,72 @@
+.header {
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @include for-tablet {
+    padding: clamp(26px, 3.8943vw, 56px) 0 clamp(65px, 7.3018vw, 105px);
+  }
+
+  @include tablet {
+    padding: 25px 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include for-laptop {
+      grid-gap: clamp(20px, 2.604vw, 50px);
+    }
+
+    @include laptop {
+      grid-gap: 20px;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      .burger {
+        &.active {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__wrapp {
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+
+    @include for-laptop {
+      grid-gap: clamp(15px, 2.088vw, 42px);
+    }
+
+    @include laptop {
+      grid-gap: 15px;
+    }
+
+    @include for-tablet {
+      flex-grow: 1;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  @include tablet {
+    display: flex;
+
+    @include burger;
+  }
+}

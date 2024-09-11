@@ -1,0 +1,39 @@
+.gallery-section{
+	position: relative;
+	z-index: 2;
+
+	@include for-small-tablet{
+		padding-bottom: clamp(40px, 9.7357vw, 140px);
+	}
+
+	@include small-tablet{
+		padding-bottom: 10px;
+	}
+
+	&__box{
+		display: flex;
+		flex-direction: column;
+		grid-gap: clamp(10px, 3.1293vw, 45px);
+	}
+
+    &__bill{
+		filter: blur(3.2599999904632568px);
+		position: absolute;
+		top: -1%;
+		right: -1%;
+        width: clamp(127px, 20.8623vw, 300px);
+        height: clamp(116px, 19.1238vw, 275px);
+		display: flex;
+		z-index: -1;
+
+		img,picture{
+			width: 100%;
+			height: 100%;
+		}
+
+        @include ios{
+            right: -10%;
+            top: 2%;
+        }
+	}
+}

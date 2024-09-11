@@ -1,0 +1,239 @@
+.logo {
+  font-family: var(--font3);
+  font-weight: 700;
+  font-size: clamp(18px, 1.7385vw, 25px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--cl-e);
+
+  b {
+    font-weight: 800;
+    color: var(--cl-a);
+  }
+}
+
+.footer-logo {
+  font-size: clamp(24px, 2.5035vw, 36px);
+}
+
+h1,
+.h1 {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: clamp(42px, 6.3282vw, 91px);
+  line-height: 105%;
+  text-transform: uppercase;
+  color: var(--cl-a);
+}
+
+h2,
+.h2 {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: clamp(32px, 3.8248vw, 55px);
+  line-height: 110%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cl-a);
+}
+
+h3,
+.h3 {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: clamp(20px, 1.9471vw, 28px);
+  line-height: 123%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--cl-a);
+}
+
+h4,
+h5,
+h6 {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: clamp(20px, 1.9471vw, 28px);
+  line-height: 123%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--cl-a);
+}
+
+.subtitle {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: clamp(18px, 1.4604vw, 21px);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--cl-a);
+  position: relative;
+  width: fit-content;
+  padding-bottom: clamp(10px, 1.0431vw, 15px);
+
+  &::before {
+    position: absolute;
+    content: "";
+    border-radius: 8px;
+    left: 6px;
+    height: 2px;
+    right: 6px;
+    bottom: 0;
+    background: var(--cl-e);
+    pointer-events: none;
+  }
+}
+
+.pretitle {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: clamp(28px, 3.8248vw, 55px);
+  color: var(--cl-a);
+  line-height: 110%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  b {
+    background: var(--gr-d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.counter {
+  font-family: var(--font3);
+  font-weight: 800;
+  font-size: clamp(36px, 5.2156vw, 75px);
+  line-height: 105%;
+  text-transform: uppercase;
+  background: var(--gr-d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+    line-height: 110%;
+    color: var(--cl-c);
+  }
+
+  h1 {
+    font-size: clamp(42px, 6.3282vw, 91px);
+  }
+
+  h2 {
+    font-size: clamp(32px, 3.8248vw, 55px);
+  }
+
+  h3 {
+    font-size: clamp(20px, 1.9471vw, 28px);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: clamp(20px, 1.9471vw, 28px);
+  }
+
+  p {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: clamp(16px, 1.5299vw, 22px);
+    line-height: 166%;
+    letter-spacing: 0.04em;
+    color: var(--cl-a);
+
+    strong,
+    b {
+      font-weight: 700;
+      color: var(--cl-e);
+    }
+  }
+
+  ol:not([class]) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+    counter-reset: item;
+
+    li {
+      position: relative;
+      padding-left: clamp(20px, 1.9471vw, 28px);
+      font-family: var(--third-family);
+      font-size: clamp(16px, 1.5299vw, 22px);
+      line-height: 166%;
+      letter-spacing: 0.04em;
+      color: var(--cl-a);
+      text-align: start;
+
+      strong {
+        background: var(--gr-d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &:before {
+        content: counter(item) ".";
+        counter-increment: item;
+        position: absolute;
+        font-size: clamp(16px, 1.5299vw, 22px);
+        line-height: 166%;
+        letter-spacing: 0.04em;
+        color: var(--cl-e);
+        left: 0;
+        top: 0;
+        font-weight: bold;
+      }
+    }
+  }
+
+  ul:not([class]) {
+    display: flex;
+    flex-direction: column;
+    counter-reset: item;
+
+    li {
+      position: relative;
+      padding-left: clamp(20px, 1.9471vw, 28px);
+      font-family: var(--third-family);
+      font-size: clamp(16px, 1.5299vw, 22px);
+      line-height: 166%;
+      letter-spacing: 0.04em;
+      color: var(--cl-a);
+      text-align: start;
+
+      strong {
+        background: var(--gr-d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &:before {
+        content: '';
+        border-radius: 100%;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: var(--cl-a);
+        left: 0;
+        top: 17px;
+        font-weight: bold;
+      }
+    }
+  }
+}

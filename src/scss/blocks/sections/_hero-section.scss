@@ -1,0 +1,116 @@
+.hero-section {
+  padding-bottom: clamp(70px, 14.6036vw, 210px);
+  position: relative;
+  z-index: 1;
+
+  &__bg{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(var(--header-height) * -1);
+    z-index: -1;
+
+    img,picture{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &::before, &:after{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    top: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &::before {
+    width: clamp(350px, 63.4214vw, 712px);
+    height: clamp(350px, 63.4214vw, 712px);
+    left: 0;
+    background: var(--gr-e);
+    filter: blur(350px);
+
+    @include mobile{
+      filter: blur(180px);
+    }
+  }
+
+  &::after {
+    width: clamp(931px, 83.936vw, 1207px);
+    height: clamp(931px, 83.936vw, 1207px);
+    right: 0;
+    transform: translate(60%, -85%);
+    background: var(--gr-f);
+    filter: blur(650px);
+
+    @include small-tablet{
+      transform: translate(75%, -85%);
+      filter: blur(350px);
+    }
+
+    @include mobile{
+      opacity: .8;
+      transform: translate(70%, -75%);
+      filter: blur(150px);
+    }
+  }
+
+  &__box {
+    grid-gap: 40px 25px;
+
+    @include for-tablet {
+      display: grid;
+      grid-template-columns: 1fr clamp(485px, 43.4631vw, 625px);
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+
+    picture,
+    img {
+      @media (min-width: (1750px)) {
+        transform: translateX(-20%) rotate(-15deg);
+        top: 15%;
+      }
+
+      @media (max-width: (1750px)) {
+        @include for-desktop {
+          transform: translate(-20%, -50%) rotate(-15deg);
+        }
+        @include for-tablet {
+          top: 50%;
+        }
+      }
+
+      @include desktop {
+        @include for-tablet {
+          transform: translate(-13%, -50%) rotate(-15deg);
+        }
+      }
+
+      @include for-tablet {
+        position: absolute;
+        right: 0;
+        height: Min(19.115vw, 367px);
+        width: Min(40.521vw, 778px);
+      }
+
+      @include tablet{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.advantages-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    grid-gap: 20px;
+
+    @include for-laptop{
+        justify-content: center;
+    }
+
+    &__icon{
+        display: flex;
+        width: clamp(155px, 14.1168vw, 203px); 
+        height: clamp(155px, 14.1168vw, 203px);
+        margin-bottom: calc(clamp(65px, 5.5633vw, 80px) * -1);
+
+        img,svg{
+            width: 100%;
+            height: auto;
+        }
+
+        &.mode{
+           img,svg{
+            position: relative;
+            top: calc(clamp(8px, 1.0431vw, 15px) * -1);
+           }
+        }
+    }
+
+    p{
+        text-align: center;
+    }
+}
